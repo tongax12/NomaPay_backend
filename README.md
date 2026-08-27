@@ -1,5 +1,3 @@
-# NomaPay_backend
-
 ```mermaid
 erDiagram
   USERS ||--|| WALLETS : tiene
@@ -17,6 +15,8 @@ erDiagram
     varchar country
     varchar password_hash
     varchar username UK
+    varchar alias UK
+    varchar cbu UK
     timestamptz created_at
     boolean is_admin
     boolean is_verified
@@ -46,6 +46,7 @@ erDiagram
     enum currency_destination
     numeric amount
     numeric fee
+    numeric final_amount
     numeric exchange_rate
     timestamptz transaction_date
   }
